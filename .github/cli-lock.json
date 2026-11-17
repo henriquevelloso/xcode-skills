@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-11-17",
+  "registry": "https://registry.npmjs.org",
+  "versions": {"codex": "0.169.0", "claude": "2.1.326"},
+  "platforms": {
+    "linux-x86_64": {
+      "codex": {
+        "url": "https://registry.npmjs.org/@openai/codex/-/codex-0.169.0-linux-x64.tgz",
+        "integrity": "sha512-o05NyAOCDygSPRo1yinzxvkRSdmsZyBD9E7mbpmjRanSfM8lypqWtQgEo4XfNkwhuCR2aFu8mlGOsQGFXVbVww==",
+        "member": "package/vendor/x86_64-unknown-linux-musl/bin/codex"
+      },
+      "claude": {
+        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-linux-x64/-/claude-code-linux-x64-2.1.326.tgz",
+        "integrity": "sha512-RvNuaeMGfPGUyUGttVvhHgVUZ3B2L+Pgf336ImZLsPP2UQHYblewi47CPFLObqz+K6D++PLP1eAsDBLYko3w+g==",
+        "member": "package/claude"
+      }
+    },
+    "darwin-arm64": {
+      "codex": {
+        "url": "https://registry.npmjs.org/@openai/codex/-/codex-0.169.0-darwin-arm64.tgz",
+        "integrity": "sha512-5WsWFBbVP78D+6FvNo1MMVxLPZdmcoQlqVJFrF4qx/TmvneLnMQKtLyXkUo54XOTDfoYKpNouTJ/F7gTVA8FnQ==",
+        "member": "package/vendor/aarch64-apple-darwin/bin/codex"
+      },
+      "claude": {
+        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code-darwin-arm64/-/claude-code-darwin-arm64-2.1.326.tgz",
+        "integrity": "sha512-u6Gk/xJdrSVbnJ4LsObftgY8/oAWv0YNkWmIirPtLrf80ocIve1VeJeoQTLJ5IkgQOSEIHMTt5V5McY/25cdPg==",
+        "member": "package/claude"
+      }
+    }
+  }
+}

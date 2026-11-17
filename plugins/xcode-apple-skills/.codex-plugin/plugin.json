@@ -1,0 +1,26 @@
+{
+  "author": {
+    "name": "Henrique Velloso",
+    "url": "https://github.com/henriquevelloso"
+  },
+  "description": "Release Xcode instruction skills and references. Xcode 27.2; community adaptation maintained by Henrique Velloso.",
+  "homepage": "https://github.com/henriquevelloso/xcode-skills",
+  "interface": {
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "category": "Developer Tools",
+    "defaultPrompt": [
+      "Review the relevant SwiftUI code without modifying files."
+    ],
+    "developerName": "Henrique Velloso",
+    "displayName": "Xcode Skills — Xcode 27.2",
+    "longDescription": "Release Xcode instruction skills and references. Xcode 27.2; community adaptation maintained by Henrique Velloso. Not an official Apple or OpenAI plugin. Uses your project's existing architecture, toolchain and instructions. No bundled hooks or servers. Source and licensing limitations are recorded in THIRD_PARTY_NOTICES.md.",
+    "shortDescription": "Release instructions from Xcode 27.2"
+  },
+  "name": "xcode-apple-skills",
+  "repository": "https://github.com/henriquevelloso/xcode-skills",
+  "skills": "./skills/",
+  "version": "27.2.0"
+}

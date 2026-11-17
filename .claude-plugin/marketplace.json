@@ -1,0 +1,18 @@
+{
+  "description": "Release and preview Xcode instruction skills maintained by Henrique Velloso.",
+  "name": "xcode-skills",
+  "owner": {
+    "name": "Henrique Velloso",
+    "url": "https://github.com/henriquevelloso"
+  },
+  "plugins": [
+    {
+      "name": "xcode-apple-skills",
+      "source": "./plugins/xcode-apple-skills"
+    },
+    {
+      "name": "xcode-apple-skills-preview",
+      "source": "./plugins/xcode-apple-skills-preview"
+    }
+  ]
+}

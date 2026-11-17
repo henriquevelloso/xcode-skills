@@ -1,0 +1,32 @@
+{
+  "interface": {
+    "displayName": "Xcode Skills by Henrique Velloso"
+  },
+  "name": "xcode-skills",
+  "plugins": [
+    {
+      "category": "Developer Tools",
+      "name": "xcode-apple-skills",
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "source": {
+        "path": "./plugins/xcode-apple-skills",
+        "source": "local"
+      }
+    },
+    {
+      "category": "Developer Tools",
+      "name": "xcode-apple-skills-preview",
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "source": {
+        "path": "./plugins/xcode-apple-skills-preview",
+        "source": "local"
+      }
+    }
+  ]
+}

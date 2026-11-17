@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-05T03:30:59.469610+00:00",
+  "page_sha256": "ceb18850130a8950a510de2abadaa9a5f5740cc492c9929c696d50423ef9aca4",
+  "releases": [
+    {
+      "build": "27A9275",
+      "channel": "stable",
+      "label": "Xcode 27.1 (27A9275)",
+      "released_at": "2026-10-15",
+      "version": "27.1"
+    },
+    {
+      "build": "27A9269",
+      "channel": "preview",
+      "label": "Xcode 27.1 beta (27A9269)",
+      "released_at": "2026-09-18",
+      "version": "27.1"
+    },
+    {
+      "build": "27B48",
+      "channel": "preview",
+      "label": "Xcode 27.2 RC (27B48)",
+      "released_at": "2026-10-19",
+      "version": "27.2"
+    },
+    {
+      "build": "27A266a",
+      "channel": "stable",
+      "label": "Xcode 27 (27A266a)",
+      "version": "27"
+    },
+    {
+      "build": "17F113",
+      "channel": "stable",
+      "label": "Xcode 26.6 (17F113)",
+      "version": "26.6"
+    },
+    {
+      "build": "27B52",
+      "channel": "stable",
+      "label": "Xcode 27.2 (27B52)",
+      "version": "27.2"
+    },
+    {
+      "build": "27C5020n",
+      "channel": "preview",
+      "label": "Xcode 27.3 beta (27C5020n)",
+      "version": "27.3"
+    }
+  ],
+  "schema_version": 1,
+  "source": "https://developer.apple.com/news/releases/"
+}

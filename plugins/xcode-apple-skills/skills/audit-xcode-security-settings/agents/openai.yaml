@@ -1,0 +1,3 @@
+interface:
+  display_name: "Xcode Security Audit"
+  short_description: "Audit hardening and apply approved scoped changes"

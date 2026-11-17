@@ -1,0 +1,61 @@
+name: Publish packages
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: immutable-package-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >-
+      github.repository == 'henriquevelloso/xcode-skills' &&
+      ((github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main') ||
+       (github.event_name == 'workflow_run' &&
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.event == 'push' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the exact successful source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Validate metadata and test release tools again
+        run: |
+          python3 -B tools/package.py validate
+          python3 -B tools/package.py generate
+          git diff --exit-code
+          python3 -B -m unittest discover -s tests -v
+          python3 -B -m unittest discover -s tools/legacy/tests -v
+          python3 -B -m unittest discover -s plugins/xcode-apple-skills/skills/audit-xcode-security-settings/tests -v
+          python3 -B -m unittest discover -s plugins/xcode-apple-skills-preview/skills/audit-xcode-security-settings-preview/tests -v
+      - name: Verify CLI compatibility for explicit retries
+        if: github.event_name == 'workflow_dispatch'
+        run: python3 -B .github/scripts/cli_smoke.py
+      - name: Build packages
+        run: python3 -B tools/package.py build
+      - name: Publish or resume immutable assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: python3 -B .github/scripts/publish_release.py

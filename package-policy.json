@@ -1,0 +1,17 @@
+{
+  "allowed_executables": {
+    "plugins/xcode-apple-skills-preview/skills/audit-xcode-security-settings-preview/scripts/filter_build_settings.py": "9185896a88493173b6fe5368f57e7377c80fc6e6b40990c92d22246edfa6e61c",
+    "plugins/xcode-apple-skills-preview/skills/audit-xcode-security-settings-preview/tests/test_filter_build_settings.py": "bc1193ec4b4a30d3db8817ce753c90066f42d004927ccf511830edb8c8650b31",
+    "plugins/xcode-apple-skills/skills/audit-xcode-security-settings/scripts/filter_build_settings.py": "9185896a88493173b6fe5368f57e7377c80fc6e6b40990c92d22246edfa6e61c",
+    "plugins/xcode-apple-skills/skills/audit-xcode-security-settings/tests/test_filter_build_settings.py": "bc1193ec4b4a30d3db8817ce753c90066f42d004927ccf511830edb8c8650b31"
+  },
+  "excluded_skills": [
+    "adopt-c-bounds-safety",
+    "device-interaction"
+  ],
+  "notes": [
+    "Only these previously reviewed helper/test bytes may ship as executable source.",
+    "A new exported executable, hook, server, binary, archive or symlink is not admitted by automatic updates."
+  ],
+  "schema_version": 1
+}

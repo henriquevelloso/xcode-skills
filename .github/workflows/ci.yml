@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Validate package and generated metadata
+        run: |
+          python3 -B tools/package.py validate
+          python3 -B tools/package.py generate
+          git diff --exit-code
+      - name: Run updater and packaging tests
+        run: python3 -B -m unittest discover -s tests -v
+      - name: Preserve historical maintenance regressions
+        run: python3 -B -m unittest discover -s tools/legacy/tests -v
+      - name: Test reviewed security filter helpers
+        run: |
+          python3 -B -m unittest discover -s plugins/xcode-apple-skills/skills/audit-xcode-security-settings/tests -v
+          python3 -B -m unittest discover -s plugins/xcode-apple-skills-preview/skills/audit-xcode-security-settings-preview/tests -v
+      - name: Install and discover both plugins in isolated CLI profiles
+        run: python3 -B .github/scripts/cli_smoke.py
+      - name: Build deterministic release packages
+        run: python3 -B tools/package.py build

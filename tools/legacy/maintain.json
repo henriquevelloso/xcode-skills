@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "state_dir": ".state",
+  "release_evidence": "release-evidence.json",
+  "app_roots": ["/Applications", "~/Applications"],
+  "marketplace": "personal",
+  "channels": {
+    "stable": {
+      "plugin_id": "xcode-apple-skills",
+      "display_name": "Xcode Apple Skills",
+      "source": "~/plugins/xcode-apple-skills"
+    },
+    "preview": {
+      "plugin_id": "xcode-apple-skills-preview",
+      "display_name": "Xcode Apple Skills Preview",
+      "source": "~/plugins/xcode-apple-skills-preview",
+      "adaptation_source": "~/plugins/xcode-apple-skills",
+      "skill_name_suffix": "-preview"
+    }
+  },
+  "legacy_export": "~/Downloads/xcode-skills",
+  "legacy_manifest": "~/plugins/xcode-apple-skills/source-snapshot.json",
+  "excluded_skills": ["adopt-c-bounds-safety", "device-interaction"],
+  "possible_renames": {"uikit-app-modernization": "app-resizability"}
+}

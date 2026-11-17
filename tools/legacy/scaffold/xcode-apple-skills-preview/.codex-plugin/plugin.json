@@ -1,0 +1,9 @@
+{
+  "name": "xcode-apple-skills-preview",
+  "version": "0.0.0",
+  "description": "Historical disabled scaffold fixture",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Xcode Apple Skills Preview"
+  }
+}

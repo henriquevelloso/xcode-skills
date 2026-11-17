@@ -1,0 +1,3 @@
+interface:
+  display_name: "App Intents New in 27 Preview"
+  short_description: "Adopt App Intents APIs for iOS 26 and 27"

@@ -1,0 +1,3 @@
+interface:
+  display_name: "App Resizability Preview"
+  short_description: "Scoped resizing, scene, display and safe area updates"

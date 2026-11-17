@@ -1,0 +1,3 @@
+interface:
+  display_name: "SwiftUI Document Apps Preview"
+  short_description: "Document editing, undo, autosave, and migration"

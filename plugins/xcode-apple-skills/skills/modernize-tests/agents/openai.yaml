@@ -1,0 +1,3 @@
+interface:
+  display_name: "Modernize Tests"
+  short_description: "Behavior-preserving XCTest to Swift Testing migration"

@@ -1,0 +1,12 @@
+{
+  "author": {
+    "name": "Henrique Velloso",
+    "url": "https://github.com/henriquevelloso"
+  },
+  "description": "Preview (beta/RC) Xcode instruction skills and references. Xcode 27.3 beta; community adaptation maintained by Henrique Velloso.",
+  "displayName": "Xcode Skills Preview — Xcode 27.3 beta",
+  "homepage": "https://github.com/henriquevelloso/xcode-skills",
+  "name": "xcode-apple-skills-preview",
+  "repository": "https://github.com/henriquevelloso/xcode-skills",
+  "version": "27.2.0"
+}
