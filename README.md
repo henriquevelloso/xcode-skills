@@ -1,5 +1,8 @@
 # Xcode Skills
 
+[![CI](https://github.com/henriquevelloso/xcode-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/henriquevelloso/xcode-skills/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/henriquevelloso/xcode-skills)](https://github.com/henriquevelloso/xcode-skills/releases/latest)
+
 **Release and preview Xcode instruction libraries for Codex and Claude Code.**
 Maintained by **Henrique Velloso**. One repository, two independently selectable
 plugins, one shared package version.
