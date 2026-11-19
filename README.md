@@ -18,12 +18,12 @@ missing tools, or establish that every example compiles on your SDK.
 ## Included sources and skills
 
 <!-- GENERATED CATALOG START -->
-**Package version: `27.2.0`**
+**Package version: `27.2.1`**
 
 | Channel | Xcode source | Build | Skills |
 | --- | --- | --- | ---: |
 | stable | Xcode 27.2 | `27B52` | 9 |
-| preview | Xcode 27.3 beta | `27C5020n` | 12 |
+| preview | Xcode 27.3 beta 2 | `27C5035i` | 13 |
 
 | Release skill | Preview counterpart |
 | --- | --- |
@@ -32,6 +32,7 @@ missing tools, or establish that every example compiles on your SDK.
 | `app-resizability` | `app-resizability-preview` |
 | `audit-xcode-security-settings` | `audit-xcode-security-settings-preview` |
 | `building-document-based-swiftui-applications` | `building-document-based-swiftui-applications-preview` |
+| — | `foundation-models-specialist-preview` |
 | — | `macos-touch-gestures-preview` |
 | `modernize-tests` | `modernize-tests-preview` |
 | — | `siri-app-integration-preview` |

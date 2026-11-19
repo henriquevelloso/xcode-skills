@@ -1,35 +1,37 @@
 {
-  "schema_version": 1,
-  "version": "27.2.0",
-  "repository": "henriquevelloso/xcode-skills",
   "author": "Henrique Velloso",
-  "channels": {
-    "stable": {
-      "plugin": "xcode-apple-skills",
-      "xcode": {
-        "version": "27.2",
-        "build": "27B52",
-        "channel": "stable",
-        "label": "Xcode 27.2 (27B52)"
-      },
-      "export_sha256": "68d85eb3682376abe5c86baeca23305a87d916e961d2cc2cc5154155e7fdc3a5",
-      "source_url": "https://developer.apple.com/news/releases/"
-    },
-    "preview": {
-      "plugin": "xcode-apple-skills-preview",
-      "xcode": {
-        "version": "27.3",
-        "build": "27C5020n",
-        "channel": "preview",
-        "label": "Xcode 27.3 beta (27C5020n)"
-      },
-      "export_sha256": "231ad97f04035ca28d41862a48cfed0638a86e5d73d1f28577ae07932e44e534",
-      "source_url": "https://developer.apple.com/news/releases/"
-    }
-  },
   "changes": {
-    "stable": {
+    "preview": {
       "added": [
+        "foundation-models-specialist-preview"
+      ],
+      "notes": [
+        "Verified a new Xcode source snapshot; unchanged skills remain listed explicitly.",
+        "Withheld audit-xcode-security-settings: New or changed executable/binary requires a separate tooling change"
+      ],
+      "removed": [],
+      "unchanged": [
+        "app-intents-specialist-preview",
+        "app-intents-whats-new-27-preview",
+        "app-resizability-preview",
+        "audit-xcode-security-settings-preview",
+        "building-document-based-swiftui-applications-preview",
+        "swiftui-specialist-preview",
+        "swiftui-whats-new-27-preview"
+      ],
+      "updated": [
+        "macos-touch-gestures-preview",
+        "modernize-tests-preview",
+        "siri-app-integration-preview",
+        "siri-evaluations-preview",
+        "xctrace-preview"
+      ]
+    },
+    "stable": {
+      "added": [],
+      "notes": [],
+      "removed": [],
+      "unchanged": [
         "app-intents-specialist",
         "app-intents-whats-new-27",
         "app-resizability",
@@ -40,34 +42,34 @@
         "swiftui-whats-new-27",
         "xctrace"
       ],
-      "updated": [],
-      "removed": [],
-      "unchanged": [],
-      "notes": [
-        "Initial public package; adapted entrypoints and references."
-      ]
-    },
-    "preview": {
-      "added": [
-        "app-intents-specialist-preview",
-        "app-intents-whats-new-27-preview",
-        "app-resizability-preview",
-        "audit-xcode-security-settings-preview",
-        "building-document-based-swiftui-applications-preview",
-        "macos-touch-gestures-preview",
-        "modernize-tests-preview",
-        "siri-app-integration-preview",
-        "siri-evaluations-preview",
-        "swiftui-specialist-preview",
-        "swiftui-whats-new-27-preview",
-        "xctrace-preview"
-      ],
-      "updated": [],
-      "removed": [],
-      "unchanged": [],
-      "notes": [
-        "Initial public package; adapted entrypoints and references."
-      ]
+      "updated": []
     }
-  }
+  },
+  "channels": {
+    "preview": {
+      "export_sha256": "2931f394fb5f3e5e1b699e3a19a839d803e82395612c0ab3c44fca6a2ac8a054",
+      "plugin": "xcode-apple-skills-preview",
+      "source_url": "https://developer.apple.com/news/releases/",
+      "xcode": {
+        "build": "27C5035i",
+        "channel": "preview",
+        "label": "Xcode 27.3 beta 2 (27C5035i)",
+        "version": "27.3"
+      }
+    },
+    "stable": {
+      "export_sha256": "68d85eb3682376abe5c86baeca23305a87d916e961d2cc2cc5154155e7fdc3a5",
+      "plugin": "xcode-apple-skills",
+      "source_url": "https://developer.apple.com/news/releases/",
+      "xcode": {
+        "build": "27B52",
+        "channel": "stable",
+        "label": "Xcode 27.2 (27B52)",
+        "version": "27.2"
+      }
+    }
+  },
+  "repository": "henriquevelloso/xcode-skills",
+  "schema_version": 1,
+  "version": "27.2.1"
 }

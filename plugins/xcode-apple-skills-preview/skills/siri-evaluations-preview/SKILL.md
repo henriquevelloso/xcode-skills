@@ -23,14 +23,15 @@ explains the report.
   entity type, changing an `AppEntity` id scheme, renumbering an `AppEnum`, or adding, removing, or
   renaming a parameter. That breaks existing integrations and every scenario that names them. Flag
   such a change instead of making it.
-- **Respect the requested stages.** A write-only or analyze-only request does not authorize a device run or app changes. When the developer requests the complete loop, proceed through the authorized stages in order. Running drives Siri on a physical device; review remains read-only unless fixes were requested.
+- **Respect the requested stages.** A write-only or analyze-only request does not authorize a device run or app changes. When the developer requests the complete loop, proceed through the authorized stages in order. Running drives real Siri on a supported physical device or Mac; review remains read-only unless fixes were requested.
+- **Preserve app data and targets.** Running an evaluation does not authorize uninstalling an app, resetting user data or deleting a test target. Explain the exact affected app, device/target and data loss, and obtain explicit approval before those operations. Prefer isolated test fixtures and reversible cleanup.
 
 # Choosing the stage
 
 | Stage | The developer wants to… | Read |
 |---|---|---|
 | `write` | create or change Siri scenarios and expectations from the app's App Intents | references/writing.md, then references/api.md as needed |
-| `run` | run the evaluation on a device, find its report, or fix an error that stopped it before grading | references/running.md |
+| `run` | run the evaluation on a device or Mac, find its report, or fix an error that stopped it before grading | references/running.md |
 | `analyze` | understand why scenarios failed and what to change in the app or the test | references/analyzing.md |
 
 Use the stage the developer named (`/siri-evaluations analyze`, "just run them"). "Diagnose" and
@@ -42,13 +43,13 @@ Read only the references for the chosen stage.
 
 # Toolchain and device scope
 
-This Preview comes from Xcode 27.3 beta (27C5020n). Verify the matching public SiriEvaluations framework and use per-command `DEVELOPER_DIR`; do not switch global Xcode selection. Device runs require a compatible physical device; simulators are unsupported. Do not enable Developer Mode, Siri, Apple Intelligence, Automation Mode, or change accounts as an automatic fix. Have the developer complete required device setup and enter any passcode themselves. Metadata and scenarios may contain real app data; keep reports local unless sharing was requested.
+This Preview comes from Xcode 27.3 beta 2 (27C5035i). Verify the matching public SiriEvaluations framework and use per-command `DEVELOPER_DIR`; do not switch global Xcode selection. Runs require a compatible physical device or Mac on the documented OS; simulators are unsupported. Use a UI Testing Bundle for the app. Do not enable Developer Mode, Siri, Apple Intelligence, Automation Mode, or change accounts as an automatic fix. Have the developer complete required setup and enter any passcode or Mac password themselves. Metadata and scenarios may contain real app data; keep reports local unless sharing was requested.
 
 # Prerequisites
 
 Before starting a stage, check that what it needs exists:
 
-- **Tests**, needed by `run`: a test target with a SiriEvaluations suite (search the test sources for
+- **Tests**, needed by `run`: a UI test target with a SiriEvaluations suite (search the test sources for
   `SiriService.run(scenario:`, `SiriScenarioLoader`, and `.evaluates(`).
 - **A report**, needed by `analyze`, in order of preference: one the developer points to, the result
   bundle of a run earlier in this conversation, or the newest `.xcresult` in the project's

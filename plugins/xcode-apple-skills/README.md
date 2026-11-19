@@ -1,6 +1,6 @@
 # Xcode Skills — Xcode 27.2
 
-Package version: `27.2.0`. Source build: `27B52`.
+Package version: `27.2.1`. Source build: `27B52`.
 
 Install from the `henriquevelloso/xcode-skills` marketplace, then select `xcode-apple-skills@xcode-skills`. The repository README contains Codex and Claude Code commands.
 
