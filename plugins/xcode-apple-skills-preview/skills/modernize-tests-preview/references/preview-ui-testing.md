@@ -1,6 +1,6 @@
 # Swift Testing UI tests in this Preview
 
-Apple's Xcode 27.3 beta (27C5020n) guidance adds support for Swift Testing in UI-test bundles. This is a toolchain and test-runner capability; an OS availability check alone does not enable it.
+Apple's Xcode 27.3 beta guidance introduced support for Swift Testing in UI-test bundles; that guidance is retained in the beta 2 (27C5035i) export. This is a toolchain and test-runner capability; an OS availability check alone does not enable it.
 
 Keep existing XCTest UI tests unless their migration was requested. Before migrating, confirm the selected Xcode, the UI-test bundle type, CI's runner/toolchain, actor isolation, launch/setup/cleanup, discovery and selectors. XCTest `measure` cases remain XCTest. Preserve the existing fail-fast and asynchronous-completion behavior documented in the migration guide.
 

@@ -8,7 +8,7 @@ This is the Preview edition. Select it when the user calls its `-preview` name o
 
 # macOS Touch Gestures — Preview
 
-These references come from Xcode 27.3 beta (27C5020n). Confirm API availability against the selected SDK and preserve deployment targets. Review/planning stays read-only; apply only the requested input changes. Keep SwiftUI, AppKit, or Catalyst architecture as found. Use per-command `DEVELOPER_DIR` when toolchain checks are needed; do not switch global Xcode selection.
+These references come from Xcode 27.3 beta 2 (27C5035i). Confirm API availability against the selected SDK and preserve deployment targets. Review/planning stays read-only; apply only the requested input changes. Keep SwiftUI, AppKit, or Catalyst architecture as found. Use per-command `DEVELOPER_DIR` when toolchain checks are needed; do not switch global Xcode selection.
 
 ## Read This First
 

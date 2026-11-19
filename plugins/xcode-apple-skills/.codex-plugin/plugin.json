@@ -22,5 +22,5 @@
   "name": "xcode-apple-skills",
   "repository": "https://github.com/henriquevelloso/xcode-skills",
   "skills": "./skills/",
-  "version": "27.2.0"
+  "version": "27.2.1"
 }

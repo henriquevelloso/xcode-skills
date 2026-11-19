@@ -1,7 +1,7 @@
 {
   "adaptation": "Community-maintained entrypoints; references are derived from the stated Xcode export. Upstream content is not authored by the project maintainer.",
   "channel": "stable",
-  "package_version": "27.2.0",
+  "package_version": "27.2.1",
   "project_maintainer": "Henrique Velloso",
   "schema_version": 1,
   "skill_file_sha256": {

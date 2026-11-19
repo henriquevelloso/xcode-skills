@@ -1,6 +1,6 @@
-# Xcode Skills Preview — Xcode 27.3 beta
+# Xcode Skills Preview — Xcode 27.3 beta 2
 
-Package version: `27.2.0`. Source build: `27C5020n`.
+Package version: `27.2.1`. Source build: `27C5035i`.
 
 Install from the `henriquevelloso/xcode-skills` marketplace, then select `xcode-apple-skills-preview@xcode-skills`. The repository README contains Codex and Claude Code commands.
 
